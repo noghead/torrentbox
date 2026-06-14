@@ -1,0 +1,15 @@
+# Secrets & local config — never commit
+.env
+
+# Runtime artifacts
+autotorrent.log
+downloads/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
