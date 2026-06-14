@@ -8,7 +8,7 @@ services:
       - TZ=America/New_York
     volumes:
       - jackett-config:/config
-      - ${DOWNLOADS_PATH:-~/Downloads/torrents}:/downloads
+      - ${DOWNLOADS_PATH:-${HOME}/Downloads/torrents}:/downloads
     ports:
       - "9117:9117"
     restart: unless-stopped
@@ -23,7 +23,7 @@ services:
       - WEBUI_PORT=8080
     volumes:
       - qbit-config:/config
-      - ${DOWNLOADS_PATH:-~/Downloads/torrents}:/downloads
+      - ${DOWNLOADS_PATH:-${HOME}/Downloads/torrents}:/downloads
     ports:
       - "8080:8080"
       - "6881:6881"
